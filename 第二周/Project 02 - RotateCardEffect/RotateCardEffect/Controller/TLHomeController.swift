@@ -44,19 +44,3 @@ extension TLHomeController: UICollectionViewDataSource {
         return cell
     }
 }
-
-// MARK: - UIScrollViewDelegate
-extension TLHomeController: UIScrollViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let cellWidthWithSpace = layout.itemSize.width + layout.minimumLineSpacing
-        
-        var offset = targetContentOffset.pointee
-        
-        let index = (offset.x + scrollView.contentInset.left) / cellWidthWithSpace
-        let roundedIndex = round(index)
-        
-        offset = CGPoint(x: roundedIndex * cellWidthWithSpace - scrollView.contentInset.left, y: -scrollView.contentInset.top)
-    }
-}
-
