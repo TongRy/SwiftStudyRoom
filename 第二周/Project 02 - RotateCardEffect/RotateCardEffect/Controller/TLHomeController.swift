@@ -44,5 +44,8 @@ extension TLHomeController: UICollectionViewDataSource {
         return cell
     }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f3596e30023a319a7fbf6920f31ee4e302125007
