@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="60o-fT-K5U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waterfall Flow Controller-->
+        <scene sceneID="Zcy-ou-5ZK">
+            <objects>
+                <collectionViewController id="60o-fT-K5U" customClass="TLWaterfallFlowController" customModule="WaterfallFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BFd-ht-6Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="EHI-eU-92w" customClass="WaterfallFlowLayout" customModule="WaterfallFlow" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DPr-Dz-kND" customClass="TLPhotoCell" customModule="WaterfallFlow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ey9-2j-TcO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ey9-2j-TcO" secondAttribute="bottom" id="DZj-3Y-skI"/>
+                                    <constraint firstItem="ey9-2j-TcO" firstAttribute="leading" secondItem="DPr-Dz-kND" secondAttribute="leading" id="TQv-fA-dRh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ey9-2j-TcO" secondAttribute="trailing" id="atK-xj-i4W"/>
+                                    <constraint firstItem="ey9-2j-TcO" firstAttribute="top" secondItem="DPr-Dz-kND" secondAttribute="top" id="dFO-QH-vlL"/>
+                                </constraints>
+                                <size key="customSize" width="180" height="180"/>
+                                <connections>
+                                    <outlet property="imageView" destination="ey9-2j-TcO" id="5SH-Jd-3jS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="60o-fT-K5U" id="UnR-4V-iQH"/>
+                            <outlet property="delegate" destination="60o-fT-K5U" id="axo-SV-khe"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5y-Zw-NtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440.80000000000001" y="-248.72563718140933"/>
+        </scene>
+    </scenes>
+</document>
